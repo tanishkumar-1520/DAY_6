@@ -5,25 +5,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
         <div class="weather-box">
-            <h1>Weather App</h1>
+            <h1>Weather Forecast</h1>
 
             <div class="search-box">
-                <input type="text" id="city" placeholder="Enter city name">
-                <button onclick="getWeather()">Search</button>
+                <input type="text" id="city" placeholder="Enter city name...">
+                <button onclick="getWeather()"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
 
-            <div class="weather-info" id="weatherInfo">
+          
+            <div class="weather-info" id="weatherInfo" style="display: none;">
                 <h2 id="cityName"></h2>
                 <h3 id="temp"></h3>
                 <p id="desc"></p>
-                <p id="humidity"></p>
-                <p id="wind"></p>
+                
+                <div class="weather-details">
+                    <div class="detail-col">
+                        <i class="fa-solid fa-droplet"></i>
+                        <div>
+                            <p id="humidity"></p>
+                            <span>Humidity</span>
+                        </div>
+                    </div>
+                    <div class="detail-col">
+                        <i class="fa-solid fa-wind"></i>
+                        <div>
+                            <p id="wind"></p>
+                            <span>Wind Speed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+      
+            <div class="error-box" id="errorBox" style="display: none;">
+                <p><i class="fa-solid fa-circle-exclamation"></i> City not found. Please try again!</p>
             </div>
         </div>
     </div>
