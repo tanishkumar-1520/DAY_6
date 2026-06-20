@@ -5,8 +5,7 @@ This project is a Modern Weather Forecast Web Application that tracks and displa
 Here is the full breakdown of what each file does in this project:
 
 
-**
-Technology Used :** 
+**Technology Used : **
 
 a) HTML 
 
