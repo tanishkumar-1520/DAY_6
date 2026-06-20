@@ -2,6 +2,8 @@ This project is a Modern Weather Forecast Web Application that tracks and displa
 
 Here is the full breakdown of what each file does in this project:
 
+
+
 **1. index.html (The Backbone):**
 
 This file defines the structure and layout of the app.
@@ -13,6 +15,7 @@ This file defines the structure and layout of the app.
 **c) Error Box:** A hidden error message section that displays a "City not found" warning if the user enters an invalid city name.
 
 
+
 **2. style.css (The Visual Design) :**
 
 This file handles the modern, user-friendly, and responsive appearance of the UI.  
@@ -22,6 +25,9 @@ This file handles the modern, user-friendly, and responsive appearance of the UI
 **b) Smooth Animations:** Includes a fadeIn keyframe animation that smoothly transitions the weather data or error blocks onto the screen.  Responsive 
 
 **c) Layout:** Uses media queries (@media) to adjust paddings and shift the horizontal weather columns into a vertical list on mobile screens for better readability. 
+
+
+
 
 **3. script.js (The Brains):**
   
