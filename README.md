@@ -1,21 +1,21 @@
-**Project Overview :******
+# Project Overview :
 
 This project is a Modern Weather Forecast Web Application that tracks and displays real-time weather information for any city worldwide. It is built using clean code across three main interconnected files: index.html, style.css, and script.js.
 
 Here is the full breakdown of what each file does in this project:
 
 
-**Technology Used : **
+# Technology Used : 
 
-a) HTML 
+- HTML 
 
-b) CSS
+- CSS
 
-c) JavaScript
+- JavaScript
 
 
 
-**1. index.html (The Backbone):**
+# index.html (The Backbone):**
 
 This file defines the structure and layout of the app.
 
@@ -27,7 +27,7 @@ This file defines the structure and layout of the app.
 
 
 
-**2. style.css (The Visual Design) :**
+# style.css (The Visual Design) :
 
 This file handles the modern, user-friendly, and responsive appearance of the UI.  
 
@@ -40,7 +40,7 @@ This file handles the modern, user-friendly, and responsive appearance of the UI
 
 
 
-**3. script.js (The Brains):**
+# script.js (The Brains):
   
 This file connects the app to the real world using JavaScript asynchronous logic.
 
@@ -48,10 +48,11 @@ This file connects the app to the real world using JavaScript asynchronous logic
 
 **b) DOM Manipulation:** It reads the JSON response from the server. If the city exists (data.cod == 200), it injects the temperature, humidity, and description directly into the HTML elements while updating visibility. 
 
-**c) Validation: **Prevents blank searches with a pop-up alert ("Please enter a city name first!") and handles typos cleanly by hiding old weather info and showing the error box instead.  
+**c) Validation:** Prevents blank searches with a pop-up alert ("Please enter a city name first!") and handles typos cleanly by hiding old weather info and showing the error box instead.  
 
-__________________________________________________________________________________________________________________________________________
+---
 
-**AUTHOR :**
 
-Tanish Kumar
+# AUTHOR :
+
+**Tanish Kumar**
