@@ -10,9 +10,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    /* Smooth transitions jab JavaScript background badlega */
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); 
     color: #fff;
     padding: 20px;
+    transition: background 0.8s ease;
 }
 
 .container {
@@ -23,49 +25,52 @@ body {
 
 .weather-box {
     width: 100%;
-    max-width: 420px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    padding: 35px 30px;
-    border-radius: 25px;
+    max-width: 440px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 40px 30px;
+    border-radius: 30px;
     text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
 }
 
 h1 {
-    font-size: 26px;
-    font-weight: 600;
+    font-size: 24px;
+    font-weight: 500;
     margin-bottom: 25px;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.9;
 }
 
 .search-box {
     display: flex;
-    gap: 12px;
-    margin-bottom: 10px;
+    gap: 10px;
+    margin-bottom: 15px;
 }
 
 .search-box input {
     flex: 1;
-    padding: 14px 20px;
-    border: none;
+    padding: 15px 22px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     outline: none;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
     color: #fff;
     font-size: 16px;
-    transition: 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .search-box input::placeholder {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .search-box input:focus {
-    background: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
 }
 
 .search-box button {
@@ -74,104 +79,125 @@ h1 {
     border: none;
     outline: none;
     background: #fff;
-    color: #2a5298;
+    color: #203a43;
     font-size: 18px;
-    border-radius: 14px;
+    border-radius: 16px;
     cursor: pointer;
-    transition: 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .search-box button:hover {
-    background: #2a5298;
-    color: #fff;
-    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .weather-info {
-    animation: fadeIn 0.6s ease-in-out;
+    animation: fadeIn 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .weather-info h2 {
-    font-size: 28px;
+    font-size: 26px;
     font-weight: 500;
     margin-top: 20px;
+    letter-spacing: 0.5px;
+}
+
+.icon-container {
+    margin: 10px 0;
+}
+
+.icon-container img {
+    width: 100px;
+    height: 100px;
+    filter: drop-shadow(0px 8px 12px rgba(0,0,0,0.15));
 }
 
 .weather-info h3 {
-    font-size: 64px;
-    font-weight: 300;
-    margin: 5px 0;
+    font-size: 68px;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 5px;
+    background: linear-gradient(to bottom, #ffffff, #e0e0e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .weather-info #desc {
-    font-size: 16px;
+    font-size: 15px;
     text-transform: capitalize;
     margin-bottom: 30px;
-    font-weight: 300;
-    letter-spacing: 1px;
-    color: #e0e0e0;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+    color: rgba(255, 255, 255, 0.75);
 }
 
-.weather-details {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 10px;
+/* Professional 2-Column Grid Layout */
+.weather-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 11fr);
+    gap: 15px;
     margin-top: 25px;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
-    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 25px;
 }
 
-.weather-details .detail-col {
+.grid-item {
     display: flex;
     align-items: center;
     text-align: left;
-    gap: 12px;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.04);
+    padding: 15px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.weather-details .detail-col i {
-    font-size: 22px;
-    color: #fff;
+.grid-item i {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    width: 25px;
+    text-align: center;
 }
 
-.weather-details .detail-col p {
-    font-size: 16px;
+.grid-item p {
+    font-size: 15px;
     font-weight: 600;
 }
 
-.weather-details .detail-col span {
+.grid-item span {
     font-size: 12px;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.5);
+    display: block;
 }
 
 .error-box {
-    color: #ff4d4d;
-    margin-top: 20px;
-    font-size: 15px;
+    background: rgba(255, 77, 77, 0.1);
+    border: 1px solid rgba(255, 77, 77, 0.2);
+    padding: 15px;
+    border-radius: 14px;
+    color: #ff6b6b;
+    margin-top: 25px;
+    font-size: 14px;
+    font-weight: 500;
     animation: fadeIn 0.4s ease;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
+    from { opacity: 0; transform: translateY(15px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-@media(max-width: 400px) {
+/* Responsive adjustments */
+@media(max-width: 440px) {
     .weather-box {
-        padding: 25px 20px;
+        padding: 30px 20px;
+    }
+    .weather-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
     }
     .weather-info h3 {
-        font-size: 52px;
-    }
-    .weather-details {
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
-        text-align: center;
-    }
-    .weather-details .detail-col {
-        text-align: center;
-        flex-direction: column;
-        gap: 5px;
+        font-size: 56px;
     }
 }
-
