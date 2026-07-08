@@ -205,3 +205,26 @@ h1 {
         width: 50%;
     }
 }
+
+@media(max-width: 390px) {
+    .weather-box {
+        padding: 15px 10px;
+    }
+    .weather-grid {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+    .weather-info h3 {
+        font-size: 40px;
+    }
+
+    .search-box input{
+        width: 50%;
+    }
+
+    .search-box input::placeholder {
+    width: 190px;
+    font-size: 13px;
+}
+
+}
