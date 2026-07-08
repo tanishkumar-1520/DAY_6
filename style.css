@@ -200,4 +200,8 @@ h1 {
     .weather-info h3 {
         font-size: 56px;
     }
+
+    .search-box input{
+        width: 50%;
+    }
 }
